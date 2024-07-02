@@ -1,0 +1,69 @@
+.temperatureControl {
+    width: 320px;
+    height: 455px;
+    background: #0e8383;
+    margin: 10px 15px;
+    border-radius: 55px;
+    padding: 15px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    font-family: "JetBrains Mono ExtraBold", sans-serif;
+}
+
+.temperatureIndicator {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid white;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    transition: background-color 0.5s ease;
+}
+
+.temperatureSwitcher:hover {
+    background-color: #88b0d5; /* Цвет кнопки при наведении */
+}
+
+.temperatureSwitcher:active {
+    transform: scale(1.1); /* Увеличение размера */
+}
+
+.temperatureSwitchers {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    flex-direction: row;
+}
+
+.temperatureSwitcher {
+    width: 94px;
+    height: 94px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: #7a7777;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.extraCold {
+    background: darkblue;
+}
+
+.cold {
+    background: #0a6bb0;
+}
+
+.warm {
+    background: #f0ad4e; /* Оранжевый цвет для средней температуры */
+}
+
+.hot {
+    background: #d9534f; /* Красный цвет для высокой температуры */
+}

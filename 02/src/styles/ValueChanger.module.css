@@ -1,0 +1,45 @@
+.valueChangerContent {
+    display: flex;
+    padding: 15px 10px;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    background: #48e8e8;
+    color: #c20ec2;
+    border: 2px solid hotpink;
+    border-radius: 10px;
+}
+
+.valueChanger {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.valueChanger.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns {
+    margin-top: 4vh;
+    gap: 33px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    background: #6666ea;
+    padding: 10px 10px;
+    border: 1px solid green;
+    border-radius: 15px;
+}
