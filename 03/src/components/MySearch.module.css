@@ -1,0 +1,7 @@
+.searchInput {
+    min-width: 250px;
+    min-height: 30px;
+    border: 2px solid #46c2f3;
+    font-size: 1rem;
+    padding: 0 3px;
+}

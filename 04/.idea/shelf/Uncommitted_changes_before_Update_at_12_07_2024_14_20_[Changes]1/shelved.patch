@@ -1,0 +1,100 @@
+Index: ../03/src/components/MySearch.module.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../03/src/components/MySearch.module.css b/../03/src/components/MySearch.module.css
+--- a/../03/src/components/MySearch.module.css	
++++ b/../03/src/components/MySearch.module.css	
+@@ -1,0 +1,7 @@
++.searchInput {
++    min-width: 250px;
++    min-height: 30px;
++    border: 2px solid #46c2f3;
++    font-size: 1rem;
++    padding: 0 3px;
++}
+\ No newline at end of file
+Index: ../03/src/hooks/useNicks.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../03/src/hooks/useNicks.js b/../03/src/hooks/useNicks.js
+--- a/../03/src/hooks/useNicks.js	
++++ b/../03/src/hooks/useNicks.js	
+@@ -1,0 +1,10 @@
++import {useMemo} from "react";
++
++export const useNicks = (nickNames, query) => {
++
++    const searchedNicks = useMemo(() => {
++        return nickNames.filter(nick => nick.toLowerCase().includes(query))
++    }, [query, nickNames])
++
++    return searchedNicks;
++}
+\ No newline at end of file
+Index: ../03/src/components/MySearch.jsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\nimport cl from './MySearch.module.css'\r\n\r\nconst MySearch = () => {\r\n    return (\r\n        <div>\r\n            <input className={cl.searchInput} placeholder=\"Search\" type=\"text\"/>\r\n        </div>\r\n    );\r\n};\r\n\r\nexport default MySearch;
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../03/src/components/MySearch.jsx b/../03/src/components/MySearch.jsx
+--- a/../03/src/components/MySearch.jsx	
++++ b/../03/src/components/MySearch.jsx	
+@@ -1,10 +1,50 @@
+-import React from 'react';
++import React, {useState} from 'react';
+ import cl from './MySearch.module.css'
++import {useNicks} from '../hooks/useNicks'
+ 
+ const MySearch = () => {
++    let nickNames = [
++        "Kracken234",
++        "aRbuz",
++        "ShadowMaster",
++        "NightHawk",
++        "FireStorm",
++        "IceQueen",
++        "Thunderbolt",
++        "StarGazer",
++        "PhoenixRising",
++        "LunaWolf",
++        "SilverArrow",
++        "CrimsonFang",
++        "DarkKnight",
++        "EmeraldDragon",
++        "MysticSphinx",
++        "ScarletWitch",
++        "SteelSamurai",
++        "GoldenEagle",
++        "NebulaWhisper",
++        "OceanSoul"
++    ];
++
++    const [query, setQuery] = useState('')
++
++    const searchedNicks = useNicks(nickNames, query)
++
+     return (
+         <div>
+-            <input className={cl.searchInput} placeholder="Search" type="text"/>
++            <input
++                className={cl.searchInput}
++                value={query}
++                onChange={e => setQuery(e.target.value)}
++                placeholder="Search"
++            />
++            {searchedNicks.length > 0 ? (
++                searchedNicks.map((nick, index) => (
++                    <p key={index}>{nick}</p>
++                ))
++            ) : (
++                <p>No results found!</p>
++            )}
+         </div>
+     );
+ };
