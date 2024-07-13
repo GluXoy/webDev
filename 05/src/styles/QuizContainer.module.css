@@ -1,0 +1,66 @@
+.quizContainer {
+    width: 870px;
+    height: 495px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    font-size: 1.85em;
+    background: #0c0844;
+    border-radius: 25px;
+    padding: 16px;
+    box-shadow: 10px 10px 42px 0 rgba(0, 0, 0, 0.75);
+    color: white;
+}
+
+.answersSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    padding: 15px;
+    width: 100%;
+    word-wrap: break-word; /* Добавлено для переноса слов */
+    word-break: break-word; /* Добавлено для переноса слов */
+}
+
+.answerButton {
+    background: inherit;
+    height: 65px;
+    border-radius: 15px;
+
+    display: flex;
+    padding: 7px;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: 5px solid #0c4379;
+    cursor: pointer;
+    color: white; /* Устанавливает цвет текста в кнопке */
+    font-size: 0.85em; /* Наследует размер шрифта от родителя */
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(22, 0, 28, 0.24);
+
+    width: 100%;
+    overflow: hidden; /* Обрезает содержимое, выходящее за границы */
+}
+
+.answerButton:hover {
+    background: #798fab;
+}
+
+.questionSection {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 100%;
+    word-wrap: break-word; /* Добавлено для переноса слов */
+    word-break: break-word; /* Добавлено для переноса слов */
+}
+
+.scoreSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

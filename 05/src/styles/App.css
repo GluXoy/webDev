@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Verdana", cursive, sans-serif;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #05699f;
+  width: 100vw;
+  height: 100vh;
+}
+
+button:focus {
+  outline: none;
+}
