@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  color: hsl(200, 100%, 90%);
+  max-width: 400px;
+  padding: 1rem;
+}
+
+.App {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 13px;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
